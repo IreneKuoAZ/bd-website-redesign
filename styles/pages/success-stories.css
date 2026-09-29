@@ -1,0 +1,14 @@
+@import url('../components/index.css');
+
+.success-story .ds-section-heading { max-width: 980px; }
+.success-story__facts { margin: var(--space-12) 0 0; padding: 0; list-style: none; }
+.success-highlights .ds-lead { margin-inline: auto; }
+.success-highlights__grid { gap: 32px; }
+.success-highlights__grid .ds-card { min-height: 312px; }
+.success-cta { text-align: center; }
+.success-cta .ds-title { max-width: 760px; margin-inline: auto; }
+.success-cta .ds-lead { margin-inline: auto; }
+.success-cta .ds-button { margin-top: 48px; }
+
+@media (max-width: 760px) { .success-highlights__grid .ds-card { min-height: 0; } }
+@media (max-width: 640px) { .success-story__facts { margin-top: var(--space-10); } .success-cta .ds-button { width: 100%; margin-top: 32px; } }

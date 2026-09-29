@@ -1,0 +1,13 @@
+@import url('../components/index.css');
+
+.contracts-section .ds-section-heading { margin-bottom: 48px; }
+.contracts-divider { width: 120px; height: 1px; display: block; margin: 40px auto 0; background: var(--color-blue-500); }
+.contracts-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.contracts-grid .ds-contract-card { min-height: 480px; }
+.contracts-help { text-align: center; }
+.contracts-help .ds-title { max-width: 1060px; margin-inline: auto; }
+.contracts-help .ds-lead { margin: 36px auto 0; }
+.contracts-help .ds-button { margin-top: 48px; }
+
+@media (max-width: 760px) { .contracts-grid { grid-template-columns: 1fr; gap: 24px; } .contracts-grid .ds-contract-card { min-height: 0; } }
+@media (max-width: 640px) { .contracts-help h2 br { display: none; } .contracts-divider { margin-top: 28px; } .contracts-section .ds-section-heading { margin-bottom: 32px; } }

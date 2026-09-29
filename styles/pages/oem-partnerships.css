@@ -1,0 +1,12 @@
+@import url('../components/index.css');
+
+.oem-hero h1 { max-width: 1120px; margin-inline: auto; }
+.oem-hero__description { max-width: 760px; margin: var(--space-10) auto 0; color: var(--color-text-secondary); font-size: 18px; line-height: 1.55; }
+.oem-hero .ds-button { max-width: 100%; margin-top: var(--space-10); }
+.oem-audiences .ds-fact-grid,
+.oem-benefits .ds-fact-grid { margin-top: var(--space-12); }
+.oem-cta { text-align: center; }
+.oem-cta .ds-lead { margin-inline: auto; }
+.oem-cta .ds-button { max-width: 100%; margin-top: var(--space-10); }
+
+@media (max-width: 640px) { .oem-hero__description { margin-top: var(--space-6); } .oem-hero .ds-button { margin-top: var(--space-8); } }

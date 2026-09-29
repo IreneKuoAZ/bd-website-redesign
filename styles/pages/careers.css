@@ -1,0 +1,97 @@
+@import url('../components/index.css');
+
+.careers-roles .ds-section-heading,
+.careers-path .ds-section-heading {
+  margin-bottom: var(--space-10);
+}
+
+.careers-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.careers-filter {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-button);
+  background: var(--color-white);
+  color: var(--color-navy-800);
+  font-size: 16px;
+}
+
+.careers-filter .ds-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-blue-700);
+}
+
+.careers-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.career-role-card .ds-button {
+  pointer-events: none;
+}
+
+.career-role-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.careers-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.careers-path-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.careers-final {
+  text-align: center;
+}
+
+.careers-final .ds-lead {
+  margin-inline: auto;
+}
+
+.careers-final .ds-button {
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 1100px) {
+  .careers-role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .careers-role-grid,
+  .careers-why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .careers-filter-row {
+    flex-direction: column;
+  }
+
+  .careers-filter {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

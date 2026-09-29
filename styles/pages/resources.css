@@ -1,0 +1,10 @@
+@import url('../components/index.css');
+.resources-documents__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.resources-document-card { min-height: 330px; }
+.resources-document-card__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.resources-document-card .ds-button { pointer-events: none; }
+.resources-help { text-align: center; }
+.resources-help .ds-lead { margin-inline: auto; }
+.resources-help .ds-button { margin-top: var(--space-8); }
+@media (max-width: 900px) { .resources-documents__grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .resources-help .ds-button { width: 100%; } }

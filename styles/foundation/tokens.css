@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Space+Mono&display=swap');
+
+:root {
+  color-scheme: light;
+  --font-heading: Montserrat, Arial, sans-serif;
+  --font-body: Inter, Arial, sans-serif;
+  --font-label: 'Space Mono', monospace;
+
+  --color-navy-800: #002b59;
+  --color-navy-600: #2d668f;
+  --color-blue-700: #1161ad;
+  --color-blue-500: #157ff0;
+  --color-blue-100: #f4f8fd;
+  --color-blue-50: #f4f9fd;
+  --color-neutral-900: #171717;
+  --color-neutral-700: #5d5d5d;
+  --color-neutral-200: #dedede;
+  --color-white: #fff;
+
+  --color-bg-page: var(--color-white);
+  --color-bg-subtle: var(--color-blue-50);
+  --color-bg-inverse: var(--color-navy-800);
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-inverse: var(--color-white);
+  --color-action-primary: var(--color-navy-800);
+  --color-action-hover: #00417e;
+  --color-action-text: var(--color-white);
+  --color-border-default: var(--color-neutral-200);
+  --color-focus: var(--color-blue-500);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-30: 120px;
+
+  --radius-card: 16px;
+  --radius-button: 999px;
+  --content-width: 1280px;
+  --shadow-card: 0 8px 24px rgb(0 43 89 / 8%);
+}

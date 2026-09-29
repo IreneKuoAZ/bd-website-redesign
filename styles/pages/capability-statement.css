@@ -1,0 +1,45 @@
+@import url('../components/index.css');
+
+
+.capability-credentials { padding-block: 56px; }
+.capability-credentials__list, .capability-proof__list { margin: 0; padding: 0; list-style: none; }
+
+.capability-section .ds-section-heading { margin-bottom: 48px; }
+.capability-section .ds-lead { margin-inline: auto; }
+.capability-card-grid { gap: 32px; }
+.capability-card { min-height: 312px; }
+.capability-proof { background: var(--color-white); }
+.capability-proof__list { margin: 0; padding: 0; }
+
+.capability-procurement .ds-lead { margin-inline: auto; }
+.capability-procurement__contracts { max-width: 1000px; margin: 56px auto 0; }
+.capability-procurement__credentials > .ds-eyebrow { margin-bottom: var(--space-4); }
+.capability-procurement__contract-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.capability-procurement__contract-list li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .7fr); gap: 24px; padding-block: 18px; border-bottom: 1px solid var(--color-border-default); }
+.capability-procurement__contract-list li:first-child { padding-top: 0; }
+.capability-procurement__contract-list li:last-child { padding-bottom: 0; border-bottom: 0; }
+.capability-procurement__contract-list span { font-weight: 500; line-height: 1.45; }
+.capability-procurement__contract-list small { color: var(--color-text-secondary); font: 400 14px/1.5 var(--font-body); overflow-wrap: anywhere; }
+.capability-procurement__action { display: flex; justify-content: center; margin-top: 48px; }
+.capability-procurement__credentials { max-width: 1000px; margin: 72px auto 0; }
+.capability-procurement__credential-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.capability-procurement__panel { gap: var(--card-gap); padding: var(--card-padding); }
+.capability-procurement__panel--wide { grid-column: 1 / -1; }
+.capability-procurement__panel-title { margin: 0; color: var(--color-text-primary); font: 500 var(--card-title-size)/1.25 var(--font-heading); }
+.capability-procurement__details { display: grid; gap: 14px; margin: 0; }
+.capability-procurement__details > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; }
+.capability-procurement__details dt { color: var(--color-text-secondary); font-size: 15px; }
+.capability-procurement__details dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+.capability-procurement__certification-list { margin: 0; padding: 0; list-style: none; }
+.capability-procurement__certification-list li { padding-block: 11px; border-bottom: 1px solid var(--color-border-default); }
+.capability-procurement__certification-list li:first-child { padding-top: 0; }
+.capability-procurement__certification-list li:last-child { padding-bottom: 0; border-bottom: 0; }
+.capability-procurement__naics { margin: 0; color: var(--color-text-secondary); font-size: 16px; line-height: 1.75; }
+
+.capability-download { text-align: center; }
+.capability-download .ds-title { max-width: 760px; margin-inline: auto; }
+.capability-download .ds-lead { margin-inline: auto; }
+.capability-download .ds-button { margin-top: 48px; }
+
+@media (max-width: 760px) { .capability-procurement__credential-grid { grid-template-columns: 1fr; } .capability-procurement__panel--wide { grid-column: auto; } .capability-card { min-height: 0; } }
+@media (max-width: 640px) { .capability-credentials { padding-block: 32px; } .capability-section .ds-section-heading { margin-bottom: 32px; } .capability-procurement__contracts { margin-top: 32px; } .capability-procurement__credentials { margin-top: 48px; } .capability-procurement__contract-list li { grid-template-columns: 1fr; gap: 6px; } .capability-procurement__details > div { grid-template-columns: 1fr; gap: 2px; } .capability-procurement__action, .capability-download .ds-button { margin-top: 32px; } }

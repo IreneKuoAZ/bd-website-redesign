@@ -1,0 +1,27 @@
+/* Single source of truth for shared card foundations and card variants. */
+:root { --card-border-color: #e2edf7; --card-padding: 2rem; --card-gap: 1.5rem; --card-title-size: 1.75rem; --card-body-size: 1.125rem; --card-eyebrow-color: var(--color-blue-700); --card-eyebrow-size: .875rem; }
+.ds-card__icon .ds-icon { width: 1.75rem; height: 1.75rem; }
+.ds-card { min-width: 0; display: flex; flex-direction: column; gap: var(--card-gap); padding: var(--card-padding); border: 1px solid var(--card-border-color); border-radius: var(--radius-card); background: var(--color-white); color: var(--color-text-primary); text-decoration: none; }
+.ds-card--subtle { background: var(--color-bg-subtle); }
+a.ds-card { transition: box-shadow .18s ease, border-color .18s ease; }
+a.ds-card:hover { border-color: var(--color-blue-700); box-shadow: var(--shadow-card); }
+.ds-card__icon { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; border-radius: var(--radius-card); background: var(--color-bg-subtle); color: var(--color-blue-700); }
+.ds-card__icon img { width: 1.75rem; height: 1.75rem; filter: brightness(0) saturate(100%) invert(29%) sepia(59%) saturate(1495%) hue-rotate(178deg) brightness(88%) contrast(90%); }
+.ds-card--subtle .ds-card__icon { background: var(--color-white); }
+.ds-card__title { margin: 0; font: 500 var(--card-title-size)/1.25 var(--font-heading); }
+.ds-card__body { margin: 0; color: var(--color-text-secondary); font-size: var(--card-body-size); line-height: 1.55; }
+.ds-card__action { display: inline-flex; align-items: center; gap: .375rem; margin-top: auto; color: var(--color-blue-700); font-size: var(--card-body-size); text-decoration: none; }
+.ds-card__action:hover { text-decoration: none; }
+.career-role-card, .resources-document-card, .news-event-card, .news-article-card { border-color: var(--card-border-color); }
+.career-role-card .ds-eyebrow, .resources-document-card .ds-eyebrow, .news-event-card .ds-eyebrow { margin-bottom: 0; }
+.career-role-card .ds-card__body, .resources-document-card .ds-card__body, .news-event-card .ds-card__body { flex: 1; }
+a.career-role-card:hover, a.resources-document-card:hover { border-color: var(--color-action-primary); }
+.ds-contract-card { background: var(--color-bg-subtle); }
+.ds-section--subtle .ds-contract-card { background: var(--color-white); }
+.ds-contract-card__logo { width: 12.5rem; height: 12.5rem; display: grid; place-items: center; overflow: hidden; border-radius: var(--radius-card); background: var(--color-white); }
+.ds-contract-card__logo img { width: 100%; height: 100%; object-fit: contain; }
+.ds-contract-card__logo--text { padding: .75rem; color: var(--color-navy-800); font: 600 clamp(1.0625rem, 2vw, 1.625rem)/1.2 var(--font-heading); text-align: center; overflow-wrap: anywhere; }
+.ds-contract-card .ds-eyebrow { margin: 0; }
+.ds-contract-card .ds-card__body { flex: 1; }
+.ds-contract-card .ds-button { margin-top: var(--space-2); }
+@media (max-width: 640px) { :root { --card-padding: 1.5rem; } .ds-contract-card__logo { width: 9.375rem; height: 9.375rem; } }

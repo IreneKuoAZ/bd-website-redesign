@@ -1,0 +1,56 @@
+@import url('../components/index.css');
+
+.ds-subpage-hero .contract-detail-hero__logo, .ds-page-hero--detail .contract-detail-hero__logo { width: 132px; height: 132px; margin: var(--space-6) auto; }
+
+.contract-detail-hero { padding: var(--space-30) 0; background: var(--color-blue-100); text-align: center; }
+.contract-detail-breadcrumb { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 64px; color: var(--color-text-secondary); font-size: 17px; }
+.contract-detail-breadcrumb a { text-underline-offset: 4px; }
+.contract-detail-breadcrumb [aria-current="page"] { color: var(--color-text-primary); }
+.contract-detail-hero__content { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.contract-detail-hero__content .ds-eyebrow { margin: 0; color: var(--color-blue-500); }
+.contract-detail-hero__logo { width: 200px; height: 200px; overflow: hidden; border-radius: var(--radius-card); background: var(--color-white); }
+.contract-detail-hero__logo img { width: 100%; height: 100%; object-fit: contain; }
+.contract-detail-hero h1 { margin: 0; font: 500 clamp(58px, 6vw, 96px)/1.2 var(--font-heading); }
+.contract-detail-hero__content > p:last-child { max-width: 760px; margin: 0; color: var(--color-text-secondary); font-size: 18px; line-height: 1.55; }
+.contract-detail-facts { padding-block: var(--space-10); }
+.contract-detail-card-grid .ds-card { min-height: 280px; }
+.contract-detail-contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10); }
+.contract-detail-section-action { display: flex; gap: 12px; margin-top: var(--space-16); }
+.contract-detail-team-grid { align-items: stretch; }
+.contract-detail-team-grid--single { grid-template-columns: minmax(0, 1fr); }
+.contract-detail-team-grid--single .ds-card { width: min(100%, 620px); justify-self: center; }
+.contract-detail-profile .ds-eyebrow { margin: 0; }
+.contract-detail-profile__photo { width: 100%; aspect-ratio: 2560 / 1433; object-fit: cover; border-radius: var(--radius-card); }
+.contract-detail-profile .ds-card__body { flex: 1; }
+.contract-detail-profile .ds-button { margin-top: var(--space-2); }
+.contract-detail-contact-panel { display: flex; align-items: center; gap: var(--space-12); margin-top: var(--space-10); padding: var(--space-12); border-radius: var(--radius-card); background: var(--color-white); }
+.contract-detail-contact-panel img { width: 180px; height: 180px; flex: none; border-radius: var(--radius-card); object-fit: cover; }
+.contract-detail-contact-panel h3 { margin: 0 0 var(--space-6); font: 500 32px/1.2 var(--font-heading); }
+.contract-detail-contact-panel p { margin: 0; color: var(--color-text-secondary); font-size: 18px; line-height: 1.55; }
+.contract-detail-contact-panel a { color: var(--color-blue-700); text-underline-offset: 3px; }
+.contract-detail-catalog-divider { height: 1px; margin: var(--space-16) 0; background: var(--color-border-default); }
+.contract-catalog__heading { display: flex; align-items: end; justify-content: space-between; gap: var(--space-6); margin-bottom: var(--space-8); }
+.contract-catalog__heading .ds-eyebrow { margin-bottom: var(--space-2); }
+.contract-catalog__heading h3 { margin: 0; font: 500 clamp(1.75rem, 3vw, 2.5rem)/1.2 var(--font-heading); letter-spacing: -.025em; }
+.contract-catalog__toolbar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .45fr); gap: var(--space-6); align-items: end; margin-bottom: var(--space-6); }
+.contract-catalog__field { margin: 0; }
+.contract-catalog__field label { display: block; margin-bottom: var(--space-2); color: var(--color-text-secondary); font-size: 1rem; }
+.contract-catalog__search { width: 100%; min-height: 52px; padding: 12px 14px; border: 1px solid var(--color-border-default); border-radius: 4px; background: var(--color-white); color: var(--color-text-primary); }
+.contract-catalog__meta { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); margin-bottom: var(--space-4); color: var(--color-text-secondary); font-size: 1rem; }
+.contract-catalog__meta p { margin: 0; }
+.contract-catalog__table { min-width: 1100px; }
+.contract-catalog__table td:nth-child(4) { min-width: 360px; }
+.contract-catalog__price { white-space: nowrap; }
+.contract-catalog__empty { padding: var(--space-12); color: var(--color-text-secondary); text-align: center; }
+.contract-catalog__pagination { display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-8); }
+.contract-catalog__pagination .ds-button { min-width: 44px; min-height: 44px; padding: 8px 12px; }
+.contract-catalog__pagination button:disabled { opacity: .45; cursor: not-allowed; }
+.contract-detail-sales-list { display: grid; gap: var(--space-4); margin: var(--space-6) 0 0; padding: 0; list-style: none; }
+.contract-detail-sales-list li { padding-top: var(--space-4); border-top: 1px solid var(--color-border-default); }
+.contract-detail-sales-list strong { color: var(--color-text-primary); }
+.contract-detail-closing { text-align: center; }
+.contract-detail-closing .ds-lead { margin-inline: auto; }
+.contract-detail-closing .ds-button { margin-top: var(--space-16); }
+
+@media (max-width: 760px) { .contract-detail-card-grid, .contract-detail-team-grid, .contract-detail-contact-grid { grid-template-columns: 1fr; } .contract-detail-contact-panel { align-items: flex-start; flex-direction: column; } .contract-catalog__heading { align-items: flex-start; flex-direction: column; } .contract-catalog__heading .ds-button { width: 100%; } .contract-catalog__toolbar { grid-template-columns: 1fr; gap: var(--space-4); } .contract-catalog__meta { align-items: flex-start; flex-direction: column; gap: var(--space-3); } }
+@media (max-width: 640px) { .contract-detail-hero { padding-block: var(--space-16); } .contract-detail-breadcrumb { margin-bottom: var(--space-10); } .contract-detail-hero__logo { width: 150px; height: 150px; } .contract-detail-contact-panel { padding: var(--space-6); } .contract-detail-section-action { flex-direction: column; } .contract-detail-section-action .ds-button, .contract-detail-closing .ds-button { width: 100%; } }

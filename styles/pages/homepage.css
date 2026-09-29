@@ -1,0 +1,62 @@
+@import url('../components/index.css');
+
+.home-hero { position: relative; isolation: isolate; display: grid; place-items: center; min-height: clamp(540px, 38.333vw, 880px); margin-bottom: var(--space-6); background: var(--color-white); text-align: center; }
+.home-hero::before { content: ""; position: absolute; z-index: -1; inset: 0; width: min(100%, 1280px); margin-inline: auto; background: url('../../assets/hero-background.svg') center / 100% auto no-repeat; }
+.home-hero__inner { max-width: 1920px; }
+.home-hero h1 { margin: 0 auto; color: var(--color-text-primary); font: 600 clamp(2.5rem, calc(4.75vw - .9rem), 6rem)/1.25 var(--font-heading); }
+.home-hero h1 span { color: var(--color-blue-500); }
+.home-hero__lead { max-width: 640px; margin: 24px auto 0; color: var(--color-text-secondary); font-size: 1.125rem; line-height: 1.75rem; }
+.home-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 38px; }
+.home-actions .ds-button { min-width: 205px; }
+.home-hero__actions { gap: 24px; margin-top: 80px; }
+.home-hero__actions .ds-button { min-width: 0; }
+
+.home-proof { padding-block: 36px; background: var(--color-bg-subtle); }
+.home-proof__grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.home-proof__item { display: flex; flex-direction: column; gap: 9px; padding: 14px 28px; border-left: 1px solid var(--color-blue-700); }
+.home-proof__item:first-child { margin-left: 0; }
+.home-proof__item strong { color: var(--color-navy-800); font: 500 clamp(1.375rem, 2vw, 1.875rem)/1.2 var(--font-heading); }
+.home-proof__item span { max-width: 220px; color: var(--color-text-secondary); font-size: .9375rem; line-height: 1.45; }
+
+.home-contracts__logos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: center; gap: 24px; }
+.home-contracts__logos img { width: 100%; max-width: 150px; height: 88px; margin-inline: auto; object-fit: contain; }
+.home-solutions .ds-section-heading { max-width: 880px; }
+.home-solutions .ds-section-heading .ds-lead { margin-inline: auto; }
+.home-solutions__grid { margin-top: 56px; }
+.home-solutions__grid .ds-card { min-height: 390px; }
+.home-solutions__grid .ds-card__body { flex: 1; }
+
+.home-partners__placeholder { min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; border: 1px dashed #a8bed1; border-radius: var(--radius-card); background: var(--color-bg-subtle); text-align: center; }
+.home-partners__placeholder span { color: var(--color-navy-800); font: 500 1.5625rem/1.2 var(--font-heading); }
+.home-partners__placeholder p { margin: 10px 0 0; color: var(--color-text-secondary); font-size: .9375rem; }
+
+.home-community__gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.home-community__gallery img { width: 100%; aspect-ratio: 1.32; object-fit: cover; border-radius: 12px; }
+.home-contact { text-align: center; }
+.home-contact__inner { max-width: 900px; }
+.home-contact .ds-lead { margin-inline: auto; }
+
+@media (max-width: 1100px) {
+  .home-contracts__logos { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+}
+@media (max-width: 900px) {
+  .home-proof__grid { grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
+}
+@media (max-width: 640px) {
+  .home-hero { min-height: 620px; padding-block: 72px; }
+  .home-hero h1 { line-height: 1.18; }
+  .home-hero__line-break { display: none; }
+  .home-hero__lead { font-size: 1.0625rem; line-height: 1.55; }
+  .home-actions { flex-direction: column; align-items: stretch; }
+  .home-actions .ds-button { width: 100%; }
+  .home-hero__actions { gap: 16px; margin-top: 40px; }
+  .home-proof__grid { gap: 18px 0; }
+  .home-proof__item { padding: 10px 12px; }
+  .home-proof__item strong { font-size: 1.25rem; }
+  .home-proof__item span { font-size: .8125rem; }
+  .home-contracts__logos { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .home-contracts__logos img { height: 72px; }
+  .home-solutions__grid .ds-card { min-height: 0; }
+  .home-community__gallery { grid-template-columns: 1fr; }
+  .home-community__gallery img { aspect-ratio: 1.5; }
+}

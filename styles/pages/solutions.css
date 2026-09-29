@@ -1,0 +1,15 @@
+@import url('../components/index.css');
+
+.solutions-hero h1 { max-width: 1080px; margin-inline: auto; }
+.solutions-core .ds-card { min-height: 300px; }
+.solutions-pm .ds-section-heading { max-width: none; }
+.solutions-pm .ds-lead { max-width: none; }
+.solutions-team .ds-media-grid { margin-top: var(--space-12); }
+.solutions-faq__list { margin-top: var(--space-12); }
+.solutions-cta { text-align: center; }
+.solutions-cta .ds-lead { margin-inline: auto; }
+.solutions-cta .ds-button { margin-top: var(--space-10); }
+
+@media (max-width: 640px) {
+  .solutions-core .ds-card { min-height: 0; }
+}
