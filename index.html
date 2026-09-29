@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Better Direct AI — Web Design System</title>
+  <link rel="stylesheet" href="./styles/components/index.css">
+  <style>
+    .catalog-hero { padding-block: 96px; background: var(--color-bg-subtle); }
+    .catalog-hero h1 { max-width: 900px; margin: 0; font: 500 clamp(42px, 6vw, 72px)/1.15 var(--font-heading); letter-spacing: -.035em; }
+    .catalog-hero p { max-width: 700px; color: var(--color-text-secondary); }
+    .catalog-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+    .catalog-swatch { min-height: 120px; display: flex; flex-direction: column; justify-content: end; padding: 16px; border: 1px solid var(--color-border-default); border-radius: 12px; font-size: 14px; }
+    .catalog-swatch code { font-size: 12px; }
+    .catalog-swatch--navy { background: var(--color-navy-800); color: white; }
+    .catalog-swatch--blue { background: var(--color-blue-700); color: white; }
+    .catalog-swatch--pale { background: var(--color-blue-50); }
+    .catalog-swatch--neutral { background: var(--color-neutral-900); color: white; }
+    .catalog-note { margin-top: 24px; color: var(--color-text-secondary); font-size: 15px; }
+    .catalog-nav-preview { overflow: visible; border: 1px solid var(--color-border-default); border-radius: var(--radius-card); background: var(--color-white); }
+    .catalog-nav-preview .ds-site-header { position: static; border-bottom: 0; border-radius: inherit; box-shadow: none; }
+  </style>
+</head>
+<body>
+  <header class="ds-header">
+    <div class="ds-container ds-header__inner">
+      <a href="#top" aria-label="Better Direct AI, back to top"><img class="ds-header__logo" src="../betterdirectAI-logo.svg" alt=""></a>
+      <nav class="ds-nav" aria-label="Design system sections">
+        <a href="#foundations">Foundations</a><a href="#top-nav">Top nav</a><a href="#buttons">Buttons</a><a href="#cards">Cards</a><a href="#layout">Layout</a>
+      </nav>
+      <div class="ds-header__actions"><a class="ds-button ds-button--primary" href="./homepage.html">View homepage</a></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="catalog-hero">
+      <div class="ds-container">
+        <p class="ds-eyebrow">Better Direct AI / v1</p>
+        <h1>Reusable components for the Better Direct AI website</h1>
+        <p>This page demonstrates the shared HTML and CSS patterns extracted from the Figma design. The components are framework independent and can be used directly in static HTML.</p>
+      </div>
+    </section>
+
+    <section class="ds-section" id="foundations">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Foundations</p><h2 class="ds-title">Color and typography</h2><p class="ds-lead">Semantic CSS variables keep common roles consistent across pages.</p></div>
+        <div class="ds-grid">
+          <div class="catalog-swatch catalog-swatch--navy">Action / inverse surface <code>#002B59</code></div>
+          <div class="catalog-swatch catalog-swatch--blue">Brand blue <code>#1161AD</code></div>
+          <div class="catalog-swatch catalog-swatch--pale">Subtle surface <code>#F4F9FD</code></div>
+          <div class="catalog-swatch catalog-swatch--neutral">Primary text <code>#171717</code></div>
+          <div class="catalog-swatch">White surface <code>#FFFFFF</code></div>
+          <div class="catalog-swatch">Default border <code>#DEDEDE</code></div>
+        </div>
+        <p class="catalog-note">Headings: Montserrat Medium. Body and controls: Inter Regular. Eyebrows: Space Mono.</p>
+      </div>
+    </section>
+
+    <section class="ds-section" id="top-nav">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Navigation</p><h2 class="ds-title">Top nav</h2><p class="ds-lead">The shared site header uses the same desktop navigation, Buy Now action, and mobile menu across pages. Resize the window to see its responsive state.</p></div>
+        <div class="catalog-nav-preview">
+          <header class="ds-header ds-site-header"></header>
+        </div>
+        <p class="catalog-note">The component CSS is in <code>styles/components/</code>; this preview only adds its surrounding border and prevents the nested header from sticking.</p>
+      </div>
+    </section>
+
+    <section class="ds-section ds-section--subtle" id="buttons">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Actions</p><h2 class="ds-title">Buttons and links</h2><p class="ds-lead">Use primary for the main section action, secondary for a supporting route, and text for low emphasis navigation.</p></div>
+        <div class="catalog-row">
+          <a class="ds-button ds-button--primary" href="#layout">Primary action</a>
+          <a class="ds-button ds-button--secondary" href="#layout">Secondary action</a>
+          <a class="ds-button ds-button--text" href="#layout">Text action <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <button class="ds-button ds-button--primary" disabled>Disabled action</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section ds-section--inverse">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Actions / inverse</p><h2 class="ds-title">Actions on navy</h2></div>
+        <div class="catalog-row">
+          <a class="ds-button ds-button--primary ds-button--inverse" href="#cards">Primary action</a>
+          <a class="ds-button ds-button--secondary ds-button--inverse" href="#cards">Secondary action</a>
+          <a class="ds-button ds-button--text ds-button--inverse" href="#cards">Text action <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <button class="ds-button ds-button--primary ds-button--inverse" type="button" disabled>Disabled action</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section" id="cards">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Content</p><h2 class="ds-title">Cards</h2><p class="ds-lead">Use a full card link when the entire card has one destination.</p></div>
+        <div class="ds-grid">
+          <a class="ds-card" href="#layout"><span class="ds-card__icon" aria-hidden="true"><svg class="ds-icon" viewBox="0 0 24 24"><path d="M12 20v2M12 2v2M17 20v2M17 2v2M2 12h2M2 17h2M2 7h2M20 12h2M20 17h2M20 7h2M7 20v2M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span><h3 class="ds-card__title">Explore solutions</h3><p class="ds-card__body">Technology and support shaped around the work your team needs to accomplish.</p><span class="ds-card__action">Learn more <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+          <a class="ds-card ds-card--subtle" href="#layout"><span class="ds-card__icon" aria-hidden="true"><svg class="ds-icon" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m9 15 2 2 4-4"/></svg></span><h3 class="ds-card__title">Find contracts</h3><p class="ds-card__body">Locate the purchasing route that fits your agency or organization.</p><span class="ds-card__action">View contracts <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+          <a class="ds-card" href="#layout"><span class="ds-card__icon" aria-hidden="true"><svg class="ds-icon" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></svg></span><h3 class="ds-card__title">Partner with us</h3><p class="ds-card__body">Connect your technology with teams who need practical outcomes.</p><span class="ds-card__action">Become a partner <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section ds-section--subtle" id="stripes">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Content / list</p><h2 class="ds-title">Stripe items</h2><p class="ds-lead">A vertical rule leads each item. Horizontal dividers separate related items without making each one a card.</p></div>
+        <ul class="ds-stripe-list" aria-label="Contract vehicles">
+          <li><a class="ds-stripe-item" href="#layout"><div class="ds-stripe-item__content"><h3 class="ds-stripe-item__title">GSA</h3><p class="ds-stripe-item__body">Federal purchasing access and procurement support.</p></div><span class="ds-stripe-item__action">Contract details <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></li>
+          <li><a class="ds-stripe-item" href="#layout"><div class="ds-stripe-item__content"><h3 class="ds-stripe-item__title">SEWP V</h3><p class="ds-stripe-item__body">A clear path to available technology products.</p></div><span class="ds-stripe-item__action">Contract details <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ds-section" id="solutions-components">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Solutions page</p><h2 class="ds-title">Media, people, and FAQ</h2><p class="ds-lead">Reusable patterns for video previews, project contacts, and expandable answers.</p></div>
+        <div class="ds-media-grid">
+          <figure class="ds-media-preview"><img src="./assets/solutions-joe.png" alt="Joe from Better Direct AI; video preview" loading="lazy"></figure>
+          <figure class="ds-media-preview"><img src="./assets/solutions-anthony.png" alt="Anthony from Better Direct AI; video preview" loading="lazy"></figure>
+        </div>
+        <div style="max-width: 680px; margin-top: 32px">
+          <aside class="ds-person-card" aria-label="Project manager contact example"><img class="ds-person-card__photo" src="./assets/pm-anthony.jpg" alt="Anthony Hernandez" width="112" height="112" loading="lazy"><div><h3 class="ds-person-card__name">Anthony Hernandez</h3><p class="ds-person-card__role">Project Manager</p><a class="ds-button ds-button--text" href="mailto:info@betterdirect.com?subject=Project%20Management%20Inquiry">Contact the team</a></div></aside>
+          <div style="margin-top: 32px"><details class="ds-faq"><summary>What types of IT installations do you offer?</summary><p class="ds-faq__answer">We provide professional installation services for a wide range of IT hardware and software.</p></details></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section ds-section--subtle" id="fact-stripes">
+      <div class="ds-container">
+        <div class="ds-section-heading"><p class="ds-eyebrow">Content / fact stripes</p><h2 class="ds-title">Parallel facts and steps</h2><p class="ds-lead">The same left-rule pattern used by “Who we serve” also supports three AI capabilities or four delivery steps.</p></div>
+        <div class="ds-fact-grid"><div class="ds-fact"><h3 class="ds-fact__value">Predictive analytics</h3><p class="ds-fact__description">Support better decisions.</p></div><div class="ds-fact"><h3 class="ds-fact__value">Process automation</h3><p class="ds-fact__description">Reduce repetitive effort.</p></div><div class="ds-fact"><h3 class="ds-fact__value">Data analysis</h3><p class="ds-fact__description">Turn information into insight.</p></div></div>
+      </div>
+    </section>
+
+    <section class="ds-section ds-section--subtle" id="layout">
+      <div class="ds-container">
+        <div class="ds-section-heading ds-section-heading--center"><p class="ds-eyebrow">Composition</p><h2 class="ds-title">A consistent section structure</h2><p class="ds-lead">Pair a short eyebrow, a clear heading, supporting copy, and one main action. Use the same container and spacing throughout the site.</p></div>
+        <div class="catalog-row" style="justify-content: center"><a class="ds-button ds-button--primary" href="mailto:info@betterdirect.com">Contact Better Direct AI</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ds-footer"></footer>
+  <script src="./scripts/site-navigation.js" defer></script>
+</body>
+</html>
+
+
+
+
