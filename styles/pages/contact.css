@@ -5,7 +5,7 @@
 .contact-inquiry__note { margin: var(--space-10) 0 0; color: var(--color-text-secondary); }
 .contact-inquiry__note a, .contact-details a:not(.ds-card__action) { color: var(--color-blue-700); }
 
-.contact-form { padding: var(--space-10); border-radius: var(--radius-card); background: var(--color-bg-subtle); }
+.contact-form { padding: var(--space-10); border: 1px solid var(--card-border-color); border-radius: var(--radius-card); background: var(--color-bg-subtle); }
 .contact-form p { margin: 0 0 var(--space-6); }
 .contact-form label { display: block; margin-bottom: var(--space-2); color: var(--color-text-secondary); font: 400 16px/1.4 var(--font-body); }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; min-height: 52px; padding: 12px 14px; border: 1px solid var(--color-border-default); border-radius: 4px; background: var(--color-white); color: var(--color-text-primary); }

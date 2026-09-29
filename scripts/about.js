@@ -10,6 +10,8 @@ document.querySelectorAll('.ds-team-card').forEach((card) => {
 
 document.querySelectorAll('.ds-team-card__media[href*="youtu.be/"]').forEach((media) => {
   media.addEventListener('click', (event) => {
+    if (window.location.protocol === 'file:') return;
+
     event.preventDefault();
 
     if (media.dataset.playing === 'true') return;
