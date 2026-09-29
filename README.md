@@ -1,4 +1,4 @@
-# Better Direct AI web design system
+# Better Direct AI web design
 
 Framework independent HTML/CSS components based on the [Hi-fi Design Figma file](https://www.figma.com/design/H43cNIVqz8JrhW0FJhMjCX/Hi-fi-Design--Copy-). Open `index.html` to see the component catalog, `homepage.html` for the homepage, `solutions.html` for the Solutions page, `partners.html` for the Partners hub, `oem-partnerships.html` for the OEM Partnerships page, `contracts.html` for the contracts page, or `contracts/gsa-mas.html` for the first contract detail page.
 
