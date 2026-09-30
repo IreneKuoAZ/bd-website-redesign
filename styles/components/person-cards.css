@@ -17,6 +17,6 @@
 .ds-team-card__media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .ds-team-card__name { margin: 0; font: 500 var(--card-title-size)/1.2 var(--font-heading); letter-spacing: -.025em; }
 .ds-team-card__bio { margin: 0; color: var(--color-text-secondary); font-size: var(--card-body-size); line-height: 1.55; }
-@media (max-width: 900px) { .ds-person-card--feature { grid-template-columns: minmax(0, 1fr); } .ds-person-card--feature .ds-person-card__photo { width: min(21.5rem, 100%); height: auto; aspect-ratio: 1; } }
+@media (max-width: 760px) { .ds-person-card--feature { grid-template-columns: minmax(0, 1fr); } .ds-person-card--feature .ds-person-card__photo { width: min(21.5rem, 100%); height: auto; aspect-ratio: 1; } }
 @media (max-width: 760px) { .ds-team-card { grid-template-columns: 1fr; row-gap: var(--card-gap); } }
-@media (max-width: 640px) { .ds-person-card { grid-template-columns: 5rem minmax(0, 1fr); } .ds-person-card__photo { width: 5rem; height: 5rem; } .ds-team-card__name { font-size: var(--card-title-size); } .ds-team-card__play { top: var(--space-4); right: var(--space-4); width: 3rem; height: 3rem; } }
+@media (max-width: 640px) { .ds-person-card:not(.ds-person-card--feature) { grid-template-columns: 5rem minmax(0, 1fr); } .ds-person-card:not(.ds-person-card--feature) .ds-person-card__photo { width: 5rem; height: 5rem; } .ds-team-card__name { font-size: var(--card-title-size); } .ds-team-card__play { top: var(--space-4); right: var(--space-4); width: 3rem; height: 3rem; } }

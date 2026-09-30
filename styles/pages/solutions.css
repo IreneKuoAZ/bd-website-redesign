@@ -5,6 +5,7 @@
 .solutions-pm .ds-section-heading { max-width: none; }
 .solutions-pm .ds-lead { max-width: none; }
 .solutions-team .ds-media-grid { margin-top: var(--space-12); }
+.solutions-team .ds-media-preview .ds-team-card__play { width: 4rem; height: 4rem; aspect-ratio: 1; object-fit: contain; }
 .solutions-faq__list { margin-top: var(--space-12); }
 .solutions-cta { text-align: center; }
 .solutions-cta .ds-lead { margin-inline: auto; }
@@ -12,4 +13,5 @@
 
 @media (max-width: 640px) {
   .solutions-core .ds-card { min-height: 0; }
+  .solutions-team .ds-media-preview .ds-team-card__play { width: 3rem; height: 3rem; }
 }
