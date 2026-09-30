@@ -34,7 +34,7 @@
 .careers-role-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-6);
+  gap: var(--grid-gap);
 }
 
 .career-role-card .ds-button {
@@ -50,7 +50,7 @@
 .careers-why-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-6);
+  gap: var(--grid-gap);
 }
 
 .careers-path-list {

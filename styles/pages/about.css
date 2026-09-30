@@ -4,7 +4,7 @@
 .about-values .ds-card { min-height: 270px; }
 .about-values .ds-card__body { margin-top: auto; }
 
-.about-team__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-10); }
+.about-team__grid { display: grid; grid-template-columns: 1fr; gap: var(--grid-gap); }
 .about-team__group { margin: 0 0 var(--space-6); color: var(--color-blue-700); font: 400 16px/1.4 var(--font-label); letter-spacing: .06em; text-transform: uppercase; }
 .about-team__group--team { margin-top: var(--space-16); }
 
@@ -37,6 +37,8 @@
 
 @media (max-width: 760px) {
   .about-community__layout { grid-template-columns: 1fr; gap: var(--space-10); }
+  .about-community__media { order: 2; }
+  .about-community__inner { order: 1; }
 }
 
 @media (max-width: 640px) {

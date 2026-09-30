@@ -43,5 +43,23 @@
   --radius-card: 16px;
   --radius-button: 999px;
   --content-width: 1280px;
+  --page-gutter: 72px;
+  --grid-gap: 32px;
   --shadow-card: 0 8px 24px rgb(0 43 89 / 8%);
+}
+
+@media (max-width: 1279px) {
+  :root { --page-gutter: 56px; --grid-gap: 28px; }
+}
+
+@media (max-width: 1023px) {
+  :root { --page-gutter: 40px; --grid-gap: 24px; }
+}
+
+@media (max-width: 767px) {
+  :root { --page-gutter: 32px; --grid-gap: 20px; }
+}
+
+@media (max-width: 479px) {
+  :root { --page-gutter: 24px; --grid-gap: 16px; }
 }

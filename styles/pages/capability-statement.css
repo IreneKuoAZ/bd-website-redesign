@@ -6,7 +6,7 @@
 
 .capability-section .ds-section-heading { margin-bottom: 48px; }
 .capability-section .ds-lead { margin-inline: auto; }
-.capability-card-grid { gap: 32px; }
+.capability-card-grid { gap: var(--grid-gap); }
 .capability-card { min-height: 312px; }
 .capability-proof { background: var(--color-white); }
 .capability-proof__list { margin: 0; padding: 0; }
