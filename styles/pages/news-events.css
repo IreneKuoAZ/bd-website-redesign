@@ -144,6 +144,19 @@
   background: var(--color-navy-800);
 }
 
+.news-event-card__photo-status {
+  position: absolute;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  margin: 0;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgb(0 43 89 / 80%);
+  color: var(--color-white);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
 .news-cta {
   text-align: center;
 }

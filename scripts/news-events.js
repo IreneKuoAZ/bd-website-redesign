@@ -22,3 +22,40 @@ document.querySelectorAll('[data-event-date]').forEach((countdown) => {
   updateCountdown();
   window.setInterval(updateCountdown, 1000);
 });
+
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const image = carousel.querySelector('img');
+  const previous = carousel.querySelector('[data-carousel-previous]');
+  const next = carousel.querySelector('[data-carousel-next]');
+  const current = carousel.querySelector('[data-carousel-current]');
+  const total = carousel.querySelector('[data-carousel-total]');
+
+  if (!image || !previous || !next || !current || !total) return;
+
+  let images;
+  try {
+    images = JSON.parse(carousel.dataset.carouselImages || '[]');
+  } catch {
+    return;
+  }
+
+  if (images.length < 2) return;
+
+  let activeIndex = 0;
+  total.textContent = images.length;
+
+  const updateImage = () => {
+    image.src = images[activeIndex];
+    current.textContent = activeIndex + 1;
+  };
+
+  previous.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + images.length) % images.length;
+    updateImage();
+  });
+
+  next.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % images.length;
+    updateImage();
+  });
+});
