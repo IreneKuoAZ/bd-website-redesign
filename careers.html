@@ -29,33 +29,51 @@
           <h2 class="ds-title" id="open-roles-title">Teams &amp; Open Roles</h2>
           <p class="ds-lead">Find work that matches your skills and make an impact alongside an experienced team.</p>
         </div>
-        <div class="careers-filter-row" aria-label="Career filters">
-          <button class="careers-filter" type="button">All teams <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-          <button class="careers-filter" type="button">All work types <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-          <button class="careers-filter" type="button">All locations <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-        </div>
-        <div class="careers-role-grid">
-          <a class="ds-card career-role-card" href="./careers/sales-executive.html" aria-label="View Sales Executive role">
+        <div class="careers-role-browser">
+          <div class="careers-filter-row" aria-label="Career filters">
+            <label class="ds-sr-only" for="career-team">Filter by team</label>
+            <select class="careers-filter" id="career-team" name="team">
+              <option value="">All teams</option>
+              <option value="sales-solutions">Sales &amp; Solutions</option>
+              <option value="technology-engineering">Technology &amp; Engineering</option>
+              <option value="early-career">Early Career</option>
+            </select>
+            <label class="ds-sr-only" for="career-work-type">Filter by work type</label>
+            <select class="careers-filter" id="career-work-type" name="work-type">
+              <option value="">All work types</option>
+              <option value="full-time">Full-time</option>
+              <option value="internship">Internship</option>
+            </select>
+            <label class="ds-sr-only" for="career-location">Filter by location</label>
+            <select class="careers-filter" id="career-location" name="location">
+              <option value="">All locations</option>
+              <option value="tempe-az">Tempe, AZ</option>
+            </select>
+          </div>
+          <div class="careers-role-grid">
+            <a class="ds-card career-role-card" href="./careers/sales-executive.html" aria-label="View Sales Executive role" data-team="sales-solutions" data-work-type="full-time" data-location="tempe-az">
             <p class="ds-eyebrow">Sales &amp; Solutions</p>
             <h3 class="ds-card__title">Sales Executive</h3>
             <p class="ds-card__body">Build customer relationships and help organizations find the right technology solutions.</p>
             <div class="career-role-card__meta"><span class="ds-tag">Tempe, AZ</span><span class="ds-tag">Full-time</span></div>
             <span class="ds-button ds-button--secondary">View Details <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-          </a>
-          <a class="ds-card career-role-card" href="./careers/systems-engineer.html" aria-label="View Systems Engineer role">
+            </a>
+            <a class="ds-card career-role-card" href="./careers/systems-engineer.html" aria-label="View Systems Engineer role" data-team="technology-engineering" data-work-type="full-time" data-location="tempe-az">
             <p class="ds-eyebrow">Technology &amp; Engineering</p>
             <h3 class="ds-card__title">Systems Engineer</h3>
             <p class="ds-card__body">Support secure infrastructure, technical evaluations, implementation, and customer environments.</p>
             <div class="career-role-card__meta"><span class="ds-tag">Tempe, AZ</span><span class="ds-tag">Full-time</span></div>
             <span class="ds-button ds-button--secondary">View Details <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-          </a>
-          <a class="ds-card career-role-card" href="./careers/ai-intern.html" aria-label="View AI Intern role">
+            </a>
+            <a class="ds-card career-role-card" href="./careers/ai-intern.html" aria-label="View AI Intern role" data-team="early-career" data-work-type="internship" data-location="tempe-az">
             <p class="ds-eyebrow">Early Career</p>
             <h3 class="ds-card__title">AI Intern</h3>
             <p class="ds-card__body">Contribute to practical AI projects that improve workflows, automation, and internal tools.</p>
             <div class="career-role-card__meta"><span class="ds-tag">Tempe, AZ</span><span class="ds-tag">Internship</span></div>
             <span class="ds-button ds-button--secondary">View Details <svg class="ds-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-          </a>
+            </a>
+          </div>
+          <p class="careers-filter-empty" role="status" hidden>No open roles match those filters.</p>
         </div>
       </div>
     </section>
@@ -101,9 +119,7 @@
 
   <footer class="ds-footer"></footer>
   <script src="./scripts/site-navigation.js" defer></script>
+  <script src="./scripts/careers.js" defer></script>
 </body>
 </html>
-
-
-
 

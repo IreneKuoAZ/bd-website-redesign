@@ -5,11 +5,15 @@
   margin-bottom: var(--space-10);
 }
 
+.careers-role-browser {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
 .careers-filter-row {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  margin-bottom: var(--space-10);
 }
 
 .careers-filter {
@@ -17,18 +21,14 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-2) var(--space-6);
+  padding: var(--space-2) 48px var(--space-2) var(--space-6);
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-button);
-  background: var(--color-white);
+  appearance: none;
+  background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23214C73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 24px center;
   color: var(--color-navy-800);
   font-size: 16px;
-}
-
-.careers-filter .ds-icon {
-  width: 16px;
-  height: 16px;
-  color: var(--color-blue-700);
+  cursor: pointer;
 }
 
 .careers-role-grid {
@@ -41,6 +41,10 @@
   pointer-events: none;
 }
 
+.career-role-card[hidden] {
+  display: none;
+}
+
 .career-role-card__meta {
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +55,11 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--grid-gap);
+}
+
+.careers-filter-empty {
+  margin: 0;
+  color: var(--color-text-secondary);
 }
 
 .careers-path-list {
