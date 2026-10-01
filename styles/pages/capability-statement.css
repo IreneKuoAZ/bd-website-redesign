@@ -21,7 +21,8 @@
 .capability-procurement__contract-list span { font-weight: 500; line-height: 1.45; }
 .capability-procurement__contract-list small { color: var(--color-text-secondary); font: 400 14px/1.5 var(--font-body); overflow-wrap: anywhere; }
 .capability-procurement__action { display: flex; justify-content: center; margin-top: 48px; }
-.capability-procurement__credentials { max-width: 1000px; margin: 72px auto 0; }
+.capability-procurement__divider { max-width: 1000px; height: 1px; margin: 48px auto 0; background: var(--color-border-default); }
+.capability-procurement__credentials { max-width: 1000px; margin: 24px auto 0; }
 .capability-procurement__credential-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .capability-procurement__panel { gap: var(--card-gap); padding: var(--card-padding); }
 .capability-procurement__panel--wide { grid-column: 1 / -1; }
@@ -42,4 +43,4 @@
 .capability-download .ds-button { margin-top: 48px; }
 
 @media (max-width: 760px) { .capability-procurement__credential-grid { grid-template-columns: 1fr; } .capability-procurement__panel--wide { grid-column: auto; } .capability-card { min-height: 0; } }
-@media (max-width: 640px) { .capability-credentials { padding-block: 32px; } .capability-section .ds-section-heading { margin-bottom: 32px; } .capability-procurement__contracts { margin-top: 32px; } .capability-procurement__credentials { margin-top: 48px; } .capability-procurement__contract-list li { grid-template-columns: 1fr; gap: 6px; } .capability-procurement__details > div { grid-template-columns: 1fr; gap: 2px; } .capability-procurement__action, .capability-download .ds-button { margin-top: 32px; } }
+@media (max-width: 640px) { .capability-credentials { padding-block: 32px; } .capability-section .ds-section-heading { margin-bottom: 32px; } .capability-procurement__contracts { margin-top: 32px; } .capability-procurement__divider { margin-top: 32px; } .capability-procurement__credentials { margin-top: 16px; } .capability-procurement__contract-list li { grid-template-columns: 1fr; gap: 6px; } .capability-procurement__details > div { grid-template-columns: 1fr; gap: 2px; } .capability-procurement__action, .capability-download .ds-button { margin-top: 32px; } }
