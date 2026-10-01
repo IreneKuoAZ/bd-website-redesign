@@ -97,8 +97,14 @@
   });
 
   const catalogUrl = '../assets/documents/ITES-4H%20Product%20Catalog.csv';
+  download.textContent = 'Download Catalog';
   download.addEventListener('click', () => {
-    window.documentPreview?.open(catalogUrl, 'ITES-4H Product Catalog', download);
+    const link = document.createElement('a');
+    link.href = new URL(catalogUrl, window.location.href).href;
+    link.download = 'ITES-4H Product Catalog.csv';
+    document.body.append(link);
+    link.click();
+    link.remove();
   });
 
   fetch(catalogUrl)
