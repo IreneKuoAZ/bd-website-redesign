@@ -37,6 +37,13 @@
 .home-contact .ds-lead { margin-inline: auto; }
 
 @media (max-width: 1100px) {
+  /*
+   * The SVG has a 2400 × 920 canvas.  At `100% auto`, that canvas becomes
+   * only 178px tall on a 465px phone, which moves its visible motif below
+   * the copy. Keep a desktop-scale slice of the artwork on narrower screens
+   * so the central blue treatment remains behind the headline.
+   */
+  .home-hero::before { background-position: center calc(50% - 24px); background-size: max(1100px, 125vw) auto; }
   .home-contracts__logos { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
 @media (max-width: 900px) {
@@ -44,6 +51,7 @@
 }
 @media (max-width: 640px) {
   .home-hero { min-height: 620px; padding-block: 72px; }
+  .home-hero::before { background-position: center calc(47% - 20px); background-size: max(760px, 200vw) auto; }
   .home-hero h1 { line-height: 1.18; }
   .home-hero__line-break { display: none; }
   .home-hero__lead { font-size: 1.0625rem; line-height: 1.55; }
