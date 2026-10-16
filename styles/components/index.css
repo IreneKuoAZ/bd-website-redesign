@@ -149,7 +149,7 @@ button, input, select, textarea { font: inherit; }
 .ds-site-menu { display: none; }
 
 .ds-footer { padding: var(--space-16) 0 var(--space-6); background: var(--color-bg-inverse); color: var(--color-text-inverse); }
-.ds-footer__grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr) 1.35fr; gap: var(--space-10); }
+.ds-footer__grid { display: grid; grid-template-columns: 1.5fr repeat(2, 1fr) 1.35fr; gap: var(--space-10); }
 .ds-footer__brand { max-width: 280px; }
 .ds-footer__logo { width: 180px; filter: brightness(0) invert(1); }
 .ds-footer h2 { margin: 0 0 var(--space-4); font: 600 .8125rem/1.4 var(--font-body); letter-spacing: .08em; text-transform: uppercase; }
