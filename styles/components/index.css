@@ -58,16 +58,23 @@ button, input, select, textarea { font: inherit; }
 .ds-feature__media { margin-top: var(--space-16); }
 .ds-feature__action { display: flex; justify-content: center; margin-top: 58px; }
 
-/* Shared overview-page hero */
-.ds-page-hero { margin: 0 clamp(1rem, 3.333vw, 4rem) 0; padding: 5rem 4rem 6rem; border-radius: 2.5rem; background: linear-gradient(180deg, var(--color-white), var(--color-blue-100)); text-align: center; }
-.ds-page-hero__inner { max-width: var(--content-width); }
+/* Parent-page hero: spacious and expressive */
+.ds-page-hero, .ds-subpage-hero, .ds-page-hero--detail { position: relative; isolation: isolate; overflow: hidden; }
+.ds-page-hero:not(.ds-page-hero--detail) { background: radial-gradient(ellipse at 90% 18%, rgb(21 127 240 / 16%) 0%, transparent 45%), linear-gradient(115deg, var(--color-blue-100) 0%, var(--color-blue-100) 54%, #e1effb 100%); }
+.ds-page-hero::before, .ds-subpage-hero::before, .ds-page-hero--detail::before { position: absolute; z-index: 0; inset: 0 0 0 auto; width: min(47%, 42rem); background-image: linear-gradient(rgb(21 127 240 / 8%) 1px, transparent 1px), linear-gradient(90deg, rgb(21 127 240 / 8%) 1px, transparent 1px); background-size: 2.75rem 2.75rem; content: ""; mask-image: linear-gradient(100deg, transparent, #000 32%, rgb(0 0 0 / 70%)); }
+.ds-page-hero::after { position: absolute; z-index: 0; inset: 0; background: linear-gradient(132deg, transparent 34%, rgb(21 127 240 / 3%) 52%, transparent 72%); content: ""; }
+.ds-page-hero { margin: 0 clamp(1rem, 3.333vw, 4rem) 0; padding: 5rem 4rem 6rem; border-radius: 2.5rem; text-align: center; }
+.ds-page-hero__inner { position: relative; z-index: 1; max-width: var(--content-width); }
 .ds-page-hero .ds-eyebrow { margin-bottom: 3rem; color: var(--color-blue-500); font-size: 1rem; line-height: 1; letter-spacing: .025em; }
 .ds-page-hero h1 { margin: 0; color: var(--color-text-primary); font: 500 clamp(3rem, 5vw, 4.5rem)/1 var(--font-heading); letter-spacing: -.09375rem; }
 .ds-page-hero h1 + p { max-width: 80rem; margin: 3rem auto 0; color: var(--color-text-secondary); font-size: 1.125rem; line-height: 1.555; }
 .ds-page-hero__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-10); }
 
-/* Shared record-detail hero: contracts, jobs, and articles */
-.ds-subpage-hero, .ds-page-hero--detail { margin: 0 clamp(1rem, 3.333vw, 4rem) 0; padding: 3rem clamp(1.5rem, 4vw, 4rem) 5rem; border-radius: 2rem; background: var(--color-bg-subtle); text-align: center; }
+/* Child-page header: same structure, quieter background treatment */
+.ds-subpage-hero, .ds-page-hero--detail { margin: 0 clamp(1rem, 3.333vw, 4rem) 0; padding: 3rem clamp(1.5rem, 4vw, 4rem) 5rem; border-radius: 2rem; background: linear-gradient(180deg, var(--color-white), var(--color-blue-100)); text-align: center; }
+.ds-subpage-hero > *, .ds-page-hero--detail > * { position: relative; z-index: 1; }
+.ds-subpage-hero::before, .ds-page-hero--detail::before { display: none; }
+.ds-subpage-hero::after, .ds-page-hero--detail::after { position: absolute; z-index: 0; inset: 0; background: linear-gradient(132deg, transparent 42%, rgb(21 127 240 / 3%) 58%, transparent 74%); content: ""; }
 .ds-detail-back-link-row { min-width: 100%; padding: 1.125rem clamp(1.5rem, 4vw, 4rem); }
 .ds-detail-back-link { display: inline-flex; align-items: center; gap: .35rem; color: var(--color-blue-700); font: 400 .875rem/1.5 var(--font-body); text-decoration: none; }
 .ds-detail-back-link:hover { text-decoration: underline; text-underline-offset: .25rem; }
